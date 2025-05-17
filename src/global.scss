@@ -1,0 +1,217 @@
+#root {
+  height: calc(var(--vh, 1vh) * 100);
+  background: linear-gradient(to bottom, #3b0d6f, #4b0082, #6b21a8);
+  color: white;
+}
+
+/* Padding Top */
+.pt-5 {
+  padding-top: 5px !important;
+}
+.pt-10 {
+  padding-top: 10px !important;
+}
+.pt-15 {
+  padding-top: 15px !important;
+}
+.pt-20 {
+  padding-top: 20px !important;
+}
+.pt-25 {
+  padding-top: 25px !important;
+}
+
+/* Padding Bottom */
+.pb-5 {
+  padding-bottom: 5px !important;
+}
+.pb-10 {
+  padding-bottom: 10px !important;
+}
+.pb-15 {
+  padding-bottom: 15px !important;
+}
+.pb-20 {
+  padding-bottom: 20px !important;
+}
+.pb-25 {
+  padding-bottom: 25px !important;
+}
+
+/* Padding Left */
+.pl-5 {
+  padding-left: 5px !important;
+}
+.pl-10 {
+  padding-left: 10px !important;
+}
+.pl-15 {
+  padding-left: 15px !important;
+}
+.pl-20 {
+  padding-left: 20px !important;
+}
+.pl-25 {
+  padding-left: 25px !important;
+}
+
+/* Padding Right */
+.pr-5 {
+  padding-right: 5px !important;
+}
+.pr-10 {
+  padding-right: 10px !important;
+}
+.pr-15 {
+  padding-right: 15px !important;
+}
+.pr-20 {
+  padding-right: 20px !important;
+}
+.pr-25 {
+  padding-right: 25px !important;
+}
+
+/* Margin */
+.m-5 {
+  margin: 5px !important;
+}
+.m-10 {
+  margin: 10px !important;
+}
+.m-15 {
+  margin: 15px !important;
+}
+.m-20 {
+  margin: 20px !important;
+}
+.m-25 {
+  margin: 25px !important;
+}
+
+/* Margin Top */
+.mt-5 {
+  margin-top: 5px !important;
+}
+.mt-10 {
+  margin-top: 10px !important;
+}
+.mt-15 {
+  margin-top: 15px !important;
+}
+.mt-20 {
+  margin-top: 20px !important;
+}
+.mt-25 {
+  margin-top: 25px !important;
+}
+
+/* Margin Bottom */
+.mb-5 {
+  margin-bottom: 5px !important;
+}
+.mb-10 {
+  margin-bottom: 10px !important;
+}
+.mb-15 {
+  margin-bottom: 15px !important;
+}
+.mb-20 {
+  margin-bottom: 20px !important;
+}
+.mb-25 {
+  margin-bottom: 25px !important;
+}
+
+/* Margin Left */
+.ml-5 {
+  margin-left: 5px !important;
+}
+.ml-10 {
+  margin-left: 10px !important;
+}
+.ml-15 {
+  margin-left: 15px !important;
+}
+.ml-20 {
+  margin-left: 20px !important;
+}
+.ml-25 {
+  margin-left: 25px !important;
+}
+
+/* Margin Right */
+.mr-5 {
+  margin-right: 5px !important;
+}
+.mr-10 {
+  margin-right: 10px !important;
+}
+.mr-15 {
+  margin-right: 15px !important;
+}
+.mr-20 {
+  margin-right: 20px !important;
+}
+.mr-25 {
+  margin-right: 25px !important;
+}
+
+/* Utility classes for quickly setting element size */
+.full-height {
+  height: 100% !important;
+}
+
+.full-width {
+  width: 100% !important;
+}
+
+.auto-height {
+  height: auto !important;
+}
+
+.auto-width {
+  width: auto !important;
+}
+
+// Mobile devices (up to 575.98px)
+@mixin mobile {
+  @media (max-width: 575.98px) {
+    @content;
+  }
+}
+
+// Mobile devices in landscape mode (576px to 767.98px)
+@mixin mobileLandscape {
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    @content;
+  }
+}
+
+// Tablets (768px to 991.98px)
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    @content;
+  }
+}
+
+// Laptops (992px to 1199.98px)
+@mixin laptop {
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    @content;
+  }
+}
+
+// Desktop screens (1200px to 1399.98px)
+@mixin desktop {
+  @media (min-width: 1200px) and (max-width: 1399.98px) {
+    @content;
+  }
+}
+
+// Large desktop screens (1400px and above)
+@mixin largeDesktop {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}

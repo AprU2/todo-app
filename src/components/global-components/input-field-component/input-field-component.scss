@@ -1,0 +1,18 @@
+.input-field {
+  width: 100%;
+  padding: 0.5rem;
+  padding-right: 2.5rem;
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 1rem;
+
+  &:focus {
+    border-color: var(--color-primary);
+    outline: none;
+  }
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}

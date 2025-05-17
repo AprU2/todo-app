@@ -1,35 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect } from "react";
+import Column from "./components/layout-components/column-component/column-component";
+import BaseText from "./components/global-components/text-component/text-component";
+import Container from "./components/layout-components/container-component/container-component";
+import InputField from "./components/global-components/input-field-component/input-field-component";
+import PrimaryButton from "./components/button-components/primary-button-component";
+import "./global.scss";
 
 function App() {
-  const [count, setCount] = useState(0)
+  useEffect(() => {
+    function setVhVariable() {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    }
+
+    setVhVariable();
+    window.addEventListener("resize", setVhVariable);
+
+    return () => window.removeEventListener("resize", setVhVariable);
+  }, []);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Column alignItems="center" justifyContent="center" className="full-height">
+      <Container
+        style={{
+          backgroundColor: "#202020",
+          padding: "20px",
+          borderRadius: "10px",
+        }}
+      >
+        <BaseText size="lg" weight="bold">
+          Hi!
+        </BaseText>
+        <InputField className="mt-10" placeholder="password" type="password" />
+
+        <PrimaryButton>
+          <BaseText>Login</BaseText>
+        </PrimaryButton>
+      </Container>
+    </Column>
+  );
 }
 
-export default App
+export default App;
