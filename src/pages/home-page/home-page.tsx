@@ -38,11 +38,11 @@ const HomePage = () => {
       <IntroSection />
 
       <Row justifyContent="center" gap={8}>
-        <OutlinedButton linkTo="">
+        <OutlinedButton linkTo="/sign-in">
           <BaseText>Sign in</BaseText>
         </OutlinedButton>
 
-        <OutlinedButton linkTo="">
+        <OutlinedButton linkTo="/sign-up">
           <BaseText>Sign up</BaseText>
         </OutlinedButton>
       </Row>

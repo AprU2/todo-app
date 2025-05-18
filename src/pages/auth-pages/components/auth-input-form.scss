@@ -1,0 +1,31 @@
+.input-wrapper {
+  position: relative;
+  margin-top: 30px;
+  width: 100%;
+
+  .input-field {
+    width: 100%;
+    padding: 0.5rem 2.5rem 0.5rem 0.75rem;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+
+    &:focus {
+      border-color: #3b82f6;
+    }
+  }
+
+  .suffix-icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    color: white;
+    pointer-events: none;
+  }
+}

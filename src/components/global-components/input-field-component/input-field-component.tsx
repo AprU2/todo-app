@@ -1,46 +1,24 @@
+import React from "react";
 import "./input-field-component.scss";
 
-interface InputFieldProps {
-  placeholder?: string;
-  autoComplete?: string;
-  type?: string;
-  className?: string;
-
-  width?: string;
-  height?: string;
-  borderRadius?: string;
-  borderWidth?: string;
-  borderColor?: string;
-}
-
-const InputField = ({
-  placeholder = "",
-  autoComplete = "off",
-  type = "text",
-  className = "",
-  width,
-  height,
-  borderRadius,
-  borderWidth,
-  borderColor,
-}: InputFieldProps) => {
-  const style: React.CSSProperties = {
-    width,
-    height,
-    borderRadius,
-    borderWidth,
-    borderColor,
-  };
-
-  return (
-    <input
-      className={`input-field ${className}`}
-      placeholder={placeholder}
-      autoComplete={autoComplete}
-      type={type}
-      style={style}
-    />
-  );
-};
+const InputField = React.forwardRef<
+  HTMLInputElement,
+  React.InputHTMLAttributes<HTMLInputElement>
+>(
+  (
+    { placeholder = "", autoComplete = "off", className = "", ...props },
+    ref
+  ) => {
+    return (
+      <input
+        ref={ref}
+        className={`input-field ${className}`}
+        placeholder={placeholder}
+        autoComplete={autoComplete}
+        {...props}
+      />
+    );
+  }
+);
 
 export default InputField;
