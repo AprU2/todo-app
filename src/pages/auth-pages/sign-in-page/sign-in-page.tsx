@@ -7,14 +7,17 @@ import Container from "../../../components/layout-components/container-component
 import BaseText from "../../../components/global-components/text-component/text-component";
 import PrimaryButton from "../../../components/button-components/primary-button-component";
 import Row from "../../../components/layout-components/row-component/row-component";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AuthInputForm from "../components/auth-input-form";
 import { useTranslation } from "react-i18next";
 import { LanguageDropdown } from "../../../components/global-components/languages-dropdown-component/languages-dropdown-component";
+import { HttpAuthService } from "../../../services/http-auth-client";
+import { Bounce, toast, ToastContainer } from "react-toastify";
 import "./sign-in-page.scss";
 
 const SignInPage = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const {
     register,
@@ -25,7 +28,16 @@ const SignInPage = () => {
   });
 
   const authLogin = async (data: { userName: string; password: string }) => {
-    console.log(data);
+    const newUser = await HttpAuthService.getInstance().signIn(data);
+    if (newUser !== null) {
+      navigate("/todos", { replace: true });
+    } else {
+      toast.error(t("alert.somethingWentWrong"), {
+        position: "top-right",
+        autoClose: 1000,
+        className: "text-lg",
+      });
+    }
   };
 
   return (
@@ -78,6 +90,19 @@ const SignInPage = () => {
           </Row>
         </Container>
       </Column>
+      <ToastContainer
+        position="top-right"
+        autoClose={1000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition={Bounce}
+      />
     </>
   );
 };

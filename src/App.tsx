@@ -4,6 +4,12 @@ import HeaderLogo from "./components/global-components/header-logo-component/hea
 import HomePage from "./pages/home-page/home-page";
 import SignInPage from "./pages/auth-pages/sign-in-page/sign-in-page";
 import SignUpPage from "./pages/auth-pages/sign-up-page/sign-up-page";
+import {
+  checkAuthLoader,
+  checkTokenLoader,
+  logout,
+} from "./helpers/auth-helper";
+import TodoPage from "./pages/todo-page/todo-page";
 import "./global.scss";
 
 const router = createBrowserRouter([
@@ -13,15 +19,23 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
+        loader: checkAuthLoader,
         element: <HomePage />,
       },
       {
         path: "/sign-in",
+        loader: logout,
         element: <SignInPage />,
       },
       {
         path: "/sign-up",
+        loader: logout,
         element: <SignUpPage />,
+      },
+      {
+        path: "/todos",
+        loader: checkTokenLoader,
+        element: <TodoPage />,
       },
     ],
   },

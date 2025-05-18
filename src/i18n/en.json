@@ -3,6 +3,7 @@
   "homePage.main": "Stay organized and boost your productivity with our Todo app. Effortlessly plan tasks, track progress, and accomplish your goals. Make every day more successful with simple, smart task management",
   "homePage.signInButton": "Sign in",
   "homePage.signUpButton": "Sign up",
+  "alert.somethingWentWrong": "Something went wrong 😔",
   "alert.userNameRequired": "Username is required",
   "alert.passwordRequired": "Password is required",
   "alert.minPasswordRequired": "Minimum 6 characters",
