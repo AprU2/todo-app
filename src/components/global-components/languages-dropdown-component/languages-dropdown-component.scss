@@ -1,0 +1,57 @@
+.language-dropdown-wrapper {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+}
+
+.language-dropdown {
+  position: relative;
+  display: inline-block;
+  color: white;
+
+  &__toggle {
+    height: 32px;
+    padding: 0 8px;
+    font-size: 16px;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    color: white;
+
+    &:hover {
+      background-color: #a855f7;
+      border-color: transparent;
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    margin-top: 8px;
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    z-index: 10;
+  }
+
+  &__item {
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+    background: transparent;
+    border: none;
+    text-align: left;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      color: #3b82f6;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "homePage.header": "Achieve More Every Day with TodoApp👨‍💻",
+  "homePage.main": "Stay organized and boost your productivity with our Todo app. Effortlessly plan tasks, track progress, and accomplish your goals. Make every day more successful with simple, smart task management",
+  "homePage.signInButton": "Sign in",
+  "homePage.signUpButton": "Sign up",
+  "alert.userNameRequired": "Username is required",
+  "alert.passwordRequired": "Password is required",
+  "alert.minPasswordRequired": "Minimum 6 characters",
+  "alert.maxPasswordRequired": "Max 20 characters",
+  "alert.fieldCannotBeEmpty": "This field can't be empty!",
+  "authInputForm.userName": "Username",
+  "authInputForm.password": "Password",
+  "submitFormButton.loading": "Loading...",
+  "signInPage.login": "Login",
+  "signInPage.loginButton": "Login",
+  "signInPage.isNoAccount": "Don't have account?",
+  "signInPage.registerButton": "Register",
+  "signUpPage.registerButton": "Register",
+  "signUpPage.loginButton": "Login",
+  "signUpPage.alreadyHaveAccount": "Already have an account?",
+  "signUpPage.register": "Register"
+}

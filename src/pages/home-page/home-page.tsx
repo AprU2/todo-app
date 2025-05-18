@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import BaseText from "../../components/global-components/text-component/text-component";
 import Column from "../../components/layout-components/column-component/column-component";
 import Row from "../../components/layout-components/row-component/row-component";
+import { useTranslation } from "react-i18next";
+import { LanguageDropdown } from "../../components/global-components/languages-dropdown-component/languages-dropdown-component";
 import "./home-page.scss";
 
 interface OutlinedButtonProps {
@@ -10,15 +12,13 @@ interface OutlinedButtonProps {
 }
 
 const HomePage = () => {
+  const { t } = useTranslation();
+
   const IntroSection = () => (
     <Column className="intro-section" gap={25}>
-      <BaseText size="xxl">Achive More Every Day with TodoApp 👨‍💻</BaseText>
+      <BaseText size="xxl">{t("homePage.header")}</BaseText>
 
-      <BaseText>
-        Stay organized and boost your productivity with our Todo app.
-        Effortlessly plan tasks, track progress, and accomplish your goals. Make
-        every day more successful with simple, smart task management
-      </BaseText>
+      <BaseText>{t("homePage.main")}</BaseText>
     </Column>
   );
 
@@ -29,24 +29,27 @@ const HomePage = () => {
   );
 
   return (
-    <Column
-      alignItems="center"
-      justifyContent="center"
-      className="full-height"
-      gap={50}
-    >
-      <IntroSection />
+    <>
+      <LanguageDropdown />
+      <Column
+        alignItems="center"
+        justifyContent="center"
+        className="full-height"
+        gap={50}
+      >
+        <IntroSection />
 
-      <Row justifyContent="center" gap={8}>
-        <OutlinedButton linkTo="/sign-in">
-          <BaseText>Sign in</BaseText>
-        </OutlinedButton>
+        <Row justifyContent="center" gap={8}>
+          <OutlinedButton linkTo="/sign-in">
+            <BaseText>{t("homePage.signInButton")}</BaseText>
+          </OutlinedButton>
 
-        <OutlinedButton linkTo="/sign-up">
-          <BaseText>Sign up</BaseText>
-        </OutlinedButton>
-      </Row>
-    </Column>
+          <OutlinedButton linkTo="/sign-up">
+            <BaseText>{t("homePage.signUpButton")}</BaseText>
+          </OutlinedButton>
+        </Row>
+      </Column>
+    </>
   );
 };
 
