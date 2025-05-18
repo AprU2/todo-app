@@ -1,0 +1,11 @@
+.header-logo {
+  position: absolute;
+  top: 16px;
+  left: 56px;
+  text-decoration: none;
+  color: white;
+
+  &:hover {
+    color: #3b82f6;
+  }
+}

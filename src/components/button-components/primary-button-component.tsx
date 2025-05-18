@@ -19,7 +19,7 @@ const PrimaryButton = ({
   return (
     <button
       type={type}
-      className={`submit-form-button ${className}`}
+      className={`primary-button ${className}`}
       disabled={loading || disabled}
       {...props}
     >
