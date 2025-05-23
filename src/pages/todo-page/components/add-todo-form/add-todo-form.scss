@@ -1,0 +1,28 @@
+.todo-form {
+  display: flex;
+  padding-bottom: 12px;
+}
+
+.todo-input {
+  flex-grow: 1;
+  padding: 8px;
+  border: 2px solid #ccc;
+  border-radius: 6px 0 0 6px;
+  outline: none;
+
+  &:focus {
+    border-color: #3b82f6;
+  }
+}
+
+.todo-button {
+  width: 64px;
+  background-color: #1e3a8a;
+  color: white;
+  border-radius: 0 6px 6px 0;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #1e40af;
+  }
+}

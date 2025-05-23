@@ -178,6 +178,10 @@
   align-self: center;
 }
 
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
 // Mobile devices (up to 575.98px)
 @mixin mobile {
   @media (max-width: 575.98px) {

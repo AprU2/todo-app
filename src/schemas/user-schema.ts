@@ -7,3 +7,8 @@ export const userSchema = yup.object().shape({
     .min(6, "alert.minPasswordRequired")
     .max(20, "alert.maxPasswordRequired"),
 });
+export interface Todo {
+  _id: string;
+  title: string;
+  isComplete: boolean;
+}

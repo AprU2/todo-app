@@ -19,5 +19,10 @@
   "signUpPage.registerButton": "Register",
   "signUpPage.loginButton": "Login",
   "signUpPage.alreadyHaveAccount": "Already have an account?",
-  "signUpPage.register": "Register"
+  "signUpPage.register": "Register",
+  "todoPage.logOutButton": "Log out",
+  "todoPage.yourTodos": "Your todos",
+  "addTodoForm.addTodos": "Please add your todos here 😊",
+  "addTodoForm.addButton": "Add",
+  "todoList.todoListEmpty": "Your todo list is empty 🥺"
 }

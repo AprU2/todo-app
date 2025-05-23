@@ -1,0 +1,17 @@
+.todo-list {
+  background: transparent;
+  padding: 4px;
+
+  &.with-border {
+    border: 1px solid white;
+    border-radius: 6px;
+  }
+
+  &.empty {
+    color: white;
+  }
+
+  .todo-item + .todo-item {
+    margin-top: 8px;
+  }
+}

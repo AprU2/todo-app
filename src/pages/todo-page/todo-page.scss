@@ -1,0 +1,51 @@
+.loading {
+  justify-content: center;
+}
+
+.loader {
+  width: 80px;
+  height: 80px;
+  border: 3px solid;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  color: #2563eb;
+}
+
+.main-content {
+  margin-top: 20vh;
+}
+
+.todo-container {
+  width: 90vw;
+  min-width: 450px;
+  max-width: 720px;
+  margin: 0 auto;
+  background-color: rgba(59, 130, 246, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.logout-button {
+  position: absolute;
+  top: 20px;
+  right: 140px;
+  height: 32px;
+  font-size: 18px;
+  margin: 0 16px;
+  background-color: #991b1b;
+  color: white;
+  padding: 0 8px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #b91c1c;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

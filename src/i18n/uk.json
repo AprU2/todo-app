@@ -19,5 +19,10 @@
   "signUpPage.registerButton": "Зареєструватися",
   "signUpPage.loginButton": "Увійти",
   "signUpPage.alreadyHaveAccount": "Вже маєте акаунт?",
-  "signUpPage.register": "Реєстрація"
+  "signUpPage.register": "Реєстрація",
+  "todoPage.logOutButton": "Вийти",
+  "todoPage.yourTodos": "Ваші завдання",
+  "addTodoForm.addTodos": "Додайте свої завдання тут 😊",
+  "addTodoForm.addButton": "Додати",
+  "todoList.todoListEmpty": "Ваш список завдань порожній 🥺"
 }
