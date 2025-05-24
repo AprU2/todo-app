@@ -11,11 +11,13 @@ import {
 } from "./helpers/auth-helper";
 import TodoPage from "./pages/todo-page/todo-page";
 import "./global.scss";
+import ErrorPage from "./pages/error-page";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HeaderLogo />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",

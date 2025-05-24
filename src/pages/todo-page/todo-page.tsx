@@ -24,18 +24,6 @@ const TodoPage = () => {
     loadTodo();
   }, []);
 
-  if (loading) {
-    return (
-      <Column
-        alignItems="center"
-        justifyContent="center"
-        className="full-height"
-      >
-        <div className="loader"></div>
-      </Column>
-    );
-  }
-
   const LogOutButton = () => {
     const navigate = useNavigate();
     return (
@@ -50,6 +38,18 @@ const TodoPage = () => {
       </button>
     );
   };
+
+  if (loading) {
+    return (
+      <Column
+        alignItems="center"
+        justifyContent="center"
+        className="full-height"
+      >
+        <div className="loader"></div>
+      </Column>
+    );
+  }
 
   return (
     <>
